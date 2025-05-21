@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Créer un ticket - SCΛRΞD BOT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="view active">
+    <a class="back" href="index.html">← Retour</a>
+    <h1>Créer un ticket</h1>
+    <form id="ticketForm">
+      <label>Nom d'utilisateur :</label>
+      <input type="text" name="username" required />
+      <label>Email (facultatif) :</label>
+      <input type="email" name="email" />
+      <label>Message :</label>
+      <textarea name="message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <p id="confirmation" style="color: green; display: none;">Ticket envoyé !</p>
+  </div>
+  <footer>
+    © 2025 ッ_ SCΛRΞD_ッ BOT. Tous droits réservés.
+  </footer>
+  <script src="ticket.js"></script>
+</body>
+</html>

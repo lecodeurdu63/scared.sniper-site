@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Tickets</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
+  <div class="view active">
+
+    <div id="loginSection">
+      <h1>Connexion Admin</h1>
+      <form id="loginForm">
+        <label>Identifiant :</label>
+        <input type="text" id="username" required />
+        <label>Mot de passe :</label>
+        <input type="password" id="password" required />
+        <button type="submit">Se connecter</button>
+      </form>
+      <p id="loginError" style="color: red; display: none;">Identifiant ou mot de passe incorrect</p>
+    </div>
+
+    <div id="adminSection" style="display: none;">
+      <a class="back" href="index.html">← Retour</a>
+      <h1>Tickets reçus</h1>
+      <div id="ticketList"></div>
+    </div>
+  </div>
+  <footer>
+    © 2025 ッ_ SCΛRΞD_ッ BOT. Tous droits réservés.
+  </footer>
+  <script src="admin.js"></script>
+</body>
+</html>
