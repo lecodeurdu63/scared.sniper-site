@@ -5,35 +5,104 @@
   <title>Charte d'Utilisation de la Communauté Discord</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2em;
-      background-color: #f8f8ff;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0bbff, #cbaaff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      animation: fadeIn 1.5s ease-in-out;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .content-wrapper {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      max-width: 900px;
+      width: 90%;
+      z-index: 1;
       color: #333;
     }
+
     h1, h2 {
       color: #5f27cd;
     }
+
     h1 {
       font-size: 2em;
       margin-bottom: 0.5em;
+      text-align: center;
     }
+
     h2 {
       margin-top: 1.5em;
       font-size: 1.5em;
     }
+
     ul {
       padding-left: 1.2em;
     }
+
     li {
       margin-bottom: 0.6em;
     }
+
     p {
       margin: 1em 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #7a4bc9;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float 12s linear infinite;
+    }
+
+    .particle:nth-child(1)  { left: 10%; top: 90%; animation-delay: 0s; }
+    .particle:nth-child(2)  { left: 25%; top: 100%; animation-delay: 2s; }
+    .particle:nth-child(3)  { left: 40%; top: 110%; animation-delay: 1s; }
+    .particle:nth-child(4)  { left: 55%; top: 95%; animation-delay: 3s; }
+    .particle:nth-child(5)  { left: 70%; top: 105%; animation-delay: 4s; }
+    .particle:nth-child(6)  { left: 85%; top: 120%; animation-delay: 2.5s; }
+    .particle:nth-child(7)  { left: 15%; top: 100%; animation-delay: 6s; }
+    .particle:nth-child(8)  { left: 35%; top: 115%; animation-delay: 5s; }
+    .particle:nth-child(9)  { left: 60%; top: 110%; animation-delay: 1.5s; }
+    .particle:nth-child(10) { left: 80%; top: 95%; animation-delay: 3.5s; }
+
+    @keyframes float {
+      0%   { transform: translateY(0) scale(1); opacity: 0.4; }
+      50%  { opacity: 0.6; }
+      100% { transform: translateY(-120vh) scale(0.5); opacity: 0; }
     }
   </style>
 </head>
 <body>
+  <!-- Particules animées -->
   <div class="particles">
     <div class="particle"></div>
     <div class="particle"></div>
@@ -47,67 +116,58 @@
     <div class="particle"></div>
   </div>
 
+  <!-- Contenu principal -->
   <div class="content-wrapper">
-    <!-- Contenu de la page -->
+    <h1>Charte d'Utilisation de la Communauté Discord</h1>
+    <p><strong>Entrée en vigueur :</strong> 15 avril 2024<br>
+       <strong>Dernière mise à jour :</strong> 15 mars 2024</p>
+
+    <p>Nous avons créé Discord dans le but d'en faire l'endroit idéal où discuter, se retrouver et s'amuser avec ses amis en ligne. Notre Charte d'Utilisation de la Communauté garantit que chacun peut s'exprimer et rejoindre la communauté, mais jamais au détriment de quelqu'un d'autre.</p>
+
+    <p>Cette Charte explique ce qui n'est pas autorisé sur Discord. Tout le monde sur Discord doit respecter ces règles, et elles s'appliquent à l'ensemble de notre plateforme, y compris à votre contenu, à vos comportements, à vos serveurs et à vos Applications.</p>
+
+    <h2>Respectez autrui</h2>
+    <ul>
+      <li>1. N'encouragez pas le harcèlement, ne l'organisez pas, et n'y prenez pas part.</li>
+      <li>2. Ne menacez pas de vous en prendre à un autre individu ou à un groupe de personnes.</li>
+      <li>3. Ne partagez pas ou ne menacez pas de partager les informations personnelles identifiables (PII) d'autrui sans leur accord.</li>
+      <li>4. Ne tenez pas des propos haineux et ne prenez pas part à d'autres types de comportements haineux.</li>
+      <li>5. N'organisez pas, n'encouragez pas et ne soutenez pas l'extrémisme violent.</li>
+      <li>6. Ne sollicitez pas, ne partagez pas et ne tentez pas de distribuer du contenu à caractère pédopornographique ou en lien avec les abus sur enfants.</li>
+      <li>7. Si vous avez moins de 18 ans, ne vous livrez pas à un comportement sexuel ou mettant votre sécurité en danger.</li>
+      <li>8. Ne vous livrez pas à un comportement sexuel avec des mineurs, ni ne sollicitez de contenu sexuel de leur part.</li>
+      <li>9. Ne rendez pas de contenu sexuellement explicite accessible aux moins de 18 ans.</li>
+      <li>10. Ne partagez pas de contenu sexuellement explicite ou suggestif appartenant à d'autres sans leur consentement.</li>
+      <li>11. Ne partagez pas de contenu glorifiant ou encourageant le suicide ou l'automutilation.</li>
+      <li>12. Ne partagez pas de contenu violent, gore ou de souffrance animale dans un but de choquer ou harceler.</li>
+    </ul>
+
+    <h2>Respectez Discord</h2>
+    <ul>
+      <li>13. N'envoyez pas de messages non sollicités en masse (spam) ou ne vendez pas d’outils à cette fin.</li>
+      <li>14. N'utilisez pas de self-bots ou d'user-bots.</li>
+      <li>15. N'utilisez pas Discord de manière frauduleuse (ex : manipulation de données, membres fictifs...).</li>
+      <li>16. Ne participez pas à la vente de comptes, noms, serveurs ou liens personnalisés Discord.</li>
+      <li>17. Ne diffusez pas de désinformation qui pourrait nuire aux personnes ou à la société.</li>
+      <li>18. Ne créez pas de faux profils ou n’usurpez pas l’identité d’autrui.</li>
+      <li>19. Ne contournez pas les sanctions permanentes en recréant des comptes.</li>
+      <li>20. N'engagez pas d’activités portant atteinte à la cybersécurité.</li>
+      <li>21. N'organisez pas ou ne participez pas à des arnaques financières.</li>
+      <li>22. N'encouragez pas la fraude ou l’escroquerie.</li>
+      <li>23. Ne soumettez pas de signalements ou de demandes abusives au support Discord.</li>
+    </ul>
+
+    <h2>Respectez la loi</h2>
+    <ul>
+      <li>24. Ne partagez pas de contenu violant la propriété intellectuelle ou les droits d’autrui.</li>
+      <li>25. Ne facilitez pas la vente de produits réglementés ou dangereux.</li>
+      <li>26. Ne participez pas à des paris illégaux ou jeux d’argent non autorisés.</li>
+      <li>27. Ne participez pas à des activités illégales (traite, sollicitations sexuelles, etc.).</li>
+    </ul>
+
+    <p>Si vous voyez du contenu ou une activité qui enfreint cette charte ou les Conditions d'Utilisation de Discord, merci de nous le signaler.</p>
+    <p>Cette charte est susceptible d’évoluer. Nous vous encourageons à la consulter régulièrement et à maintenir une attitude respectueuse afin que Discord reste un lieu agréable et sécurisé pour tous.</p>
+    <p><strong>Merci de votre coopération.</strong></p>
   </div>
 </body>
-
-
-  <h1>Charte d'Utilisation de la Communauté Discord</h1>
-  <p><strong>Entrée en vigueur :</strong> 15 avril 2024<br>
-     <strong>Dernière mise à jour :</strong> 15 mars 2024</p>
-
-  <p>Nous avons créé Discord dans le but d'en faire l'endroit idéal où discuter, se retrouver et s'amuser avec ses amis en ligne. Notre Charte d'Utilisation de la Communauté garantit que chacun peut s'exprimer et rejoindre la communauté, mais jamais au détriment de quelqu'un d'autre.</p>
-
-  <p>Cette Charte explique ce qui n'est pas autorisé sur Discord. Tout le monde sur Discord doit respecter ces règles, et elles s'appliquent à l'ensemble de notre plateforme, y compris à votre contenu, à vos comportements, à vos serveurs et à vos Applications.</p>
-
-  <h2>Respectez autrui</h2>
-  <ul>
-    <li>1. N'encouragez pas le harcèlement, ne l'organisez pas, et n'y prenez pas part.</li>
-    <li>2. Ne menacez pas de vous en prendre à un autre individu ou à un groupe de personnes.</li>
-    <li>3. Ne partagez pas ou ne menacez pas de partager les informations personnelles identifiables (PII) d'autrui sans leur accord.</li>
-    <li>4. Ne tenez pas des propos haineux et ne prenez pas part à d'autres types de comportements haineux.</li>
-    <li>5. N'organisez pas, n'encouragez pas et ne soutenez pas l'extrémisme violent.</li>
-    <li>6. Ne sollicitez pas, ne partagez pas et ne tentez pas de distribuer du contenu à caractère pédopornographique ou en lien avec les abus sur enfants.</li>
-    <li>7. Si vous avez moins de 18 ans, ne vous livrez pas à un comportement sexuel ou mettant votre sécurité en danger.</li>
-    <li>8. Ne vous livrez pas à un comportement sexuel avec des mineurs, ni ne sollicitez de contenu sexuel de leur part.</li>
-    <li>9. Ne rendez pas de contenu sexuellement explicite accessible aux moins de 18 ans.</li>
-    <li>10. Ne partagez pas de contenu sexuellement explicite ou suggestif appartenant à d'autres sans leur consentement.</li>
-    <li>11. Ne partagez pas de contenu glorifiant ou encourageant le suicide ou l'automutilation.</li>
-    <li>12. Ne partagez pas de contenu violent, gore ou de souffrance animale dans un but de choquer ou harceler.</li>
-  </ul>
-
-  <h2>Respectez Discord</h2>
-  <ul>
-    <li>13. N'envoyez pas de messages non sollicités en masse (spam) ou ne vendez pas d’outils à cette fin.</li>
-    <li>14. N'utilisez pas de self-bots ou d'user-bots.</li>
-    <li>15. N'utilisez pas Discord de manière frauduleuse (ex : manipulation de données, membres fictifs...).</li>
-    <li>16. Ne participez pas à la vente de comptes, noms, serveurs ou liens personnalisés Discord.</li>
-    <li>17. Ne diffusez pas de désinformation qui pourrait nuire aux personnes ou à la société.</li>
-    <li>18. Ne créez pas de faux profils ou n’usurpez pas l’identité d’autrui.</li>
-    <li>19. Ne contournez pas les sanctions permanentes en recréant des comptes.</li>
-    <li>20. N'engagez pas d’activités portant atteinte à la cybersécurité.</li>
-    <li>21. N'organisez pas ou ne participez pas à des arnaques financières.</li>
-    <li>22. N'encouragez pas la fraude ou l’escroquerie.</li>
-    <li>23. Ne soumettez pas de signalements ou de demandes abusives au support Discord.</li>
-  </ul>
-
-  <h2>Respectez la loi</h2>
-  <ul>
-    <li>24. Ne partagez pas de contenu violant la propriété intellectuelle ou les droits d’autrui.</li>
-    <li>25. Ne facilitez pas la vente de produits réglementés ou dangereux.</li>
-    <li>26. Ne participez pas à des paris illégaux ou jeux d’argent non autorisés.</li>
-    <li>27. Ne participez pas à des activités illégales (traite, sollicitations sexuelles, etc.).</li>
-  </ul>
-
-  <p>Si vous voyez du contenu ou une activité qui enfreint cette charte ou les Conditions d'Utilisation de Discord, merci de nous le signaler.</p>
-
-  <p>Cette charte est susceptible d’évoluer. Nous vous encourageons à la consulter régulièrement et à maintenir une attitude respectueuse afin que Discord reste un lieu agréable et sécurisé pour tous.</p>
-
-  <p><strong>Merci de votre coopération.</strong></p>
-
-</body>
 </html>
-
-
-
