@@ -1,3 +1,4 @@
+/* ===== BODY & FOND ===== */
 body {
   margin: 0;
   padding: 0;
@@ -7,20 +8,35 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   animation: fadeIn 1.5s ease-in-out;
   overflow: hidden;
   position: relative;
 }
 
+/* ===== CONTENU PRINCIPAL - FOND BLANC SEMI-TRANSPARENT ===== */
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  width: 90%;
+  z-index: 1;
+  color: #333;
+}
+
+/* ===== TITRE ===== */
 h1 {
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  color: #5a2ea6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   margin-bottom: 40px;
   font-size: 3em;
   z-index: 1;
+  text-align: center;
 }
 
+/* ===== MENU (LIENS) ===== */
 .menu {
   display: flex;
   flex-direction: column;
@@ -49,12 +65,13 @@ h1 {
   transform: scale(1.05);
 }
 
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Particules violettes */
+/* ===== PARTICULES VIOLETTES ===== */
 .particles {
   position: absolute;
   top: 0;
