@@ -6,27 +6,18 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 2em;
       background: linear-gradient(135deg, #e0bbff, #cbaaff);
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       animation: fadeIn 1.5s ease-in-out;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
       position: relative;
-    }
-
-    .content-wrapper {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 40px 60px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      max-width: 900px;
-      width: 90%;
-      z-index: 1;
       color: #333;
     }
 
@@ -62,8 +53,9 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Particules violettes */
     .particles {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -99,10 +91,18 @@
       50%  { opacity: 0.6; }
       100% { transform: translateY(-120vh) scale(0.5); opacity: 0; }
     }
+
+    .content-wrapper {
+      z-index: 1;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 2em;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
-  <!-- Particules animées -->
   <div class="particles">
     <div class="particle"></div>
     <div class="particle"></div>
@@ -116,7 +116,6 @@
     <div class="particle"></div>
   </div>
 
-  <!-- Contenu principal -->
   <div class="content-wrapper">
     <h1>Charte d'Utilisation de la Communauté Discord</h1>
     <p><strong>Entrée en vigueur :</strong> 15 avril 2024<br>
@@ -166,7 +165,9 @@
     </ul>
 
     <p>Si vous voyez du contenu ou une activité qui enfreint cette charte ou les Conditions d'Utilisation de Discord, merci de nous le signaler.</p>
+
     <p>Cette charte est susceptible d’évoluer. Nous vous encourageons à la consulter régulièrement et à maintenir une attitude respectueuse afin que Discord reste un lieu agréable et sécurisé pour tous.</p>
+
     <p><strong>Merci de votre coopération.</strong></p>
   </div>
 </body>
