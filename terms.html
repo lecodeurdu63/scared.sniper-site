@@ -1,40 +1,149 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Termes de Service - SCΛRΞD BOT</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Termes de Service</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2em;
+      background: linear-gradient(135deg, #e0bbff, #cbaaff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      animation: fadeIn 1.5s ease-in-out;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #5f27cd;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 1.5em;
+      font-size: 1.5em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin-bottom: 0.6em;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #7a4bc9;
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: float 12s linear infinite;
+    }
+
+    .particle:nth-child(1)  { left: 10%; top: 90%; animation-delay: 0s; }
+    .particle:nth-child(2)  { left: 25%; top: 100%; animation-delay: 2s; }
+    .particle:nth-child(3)  { left: 40%; top: 110%; animation-delay: 1s; }
+    .particle:nth-child(4)  { left: 55%; top: 95%; animation-delay: 3s; }
+    .particle:nth-child(5)  { left: 70%; top: 105%; animation-delay: 4s; }
+    .particle:nth-child(6)  { left: 85%; top: 120%; animation-delay: 2.5s; }
+    .particle:nth-child(7)  { left: 15%; top: 100%; animation-delay: 6s; }
+    .particle:nth-child(8)  { left: 35%; top: 115%; animation-delay: 5s; }
+    .particle:nth-child(9)  { left: 60%; top: 110%; animation-delay: 1.5s; }
+    .particle:nth-child(10) { left: 80%; top: 95%; animation-delay: 3.5s; }
+
+    @keyframes float {
+      0%   { transform: translateY(0) scale(1); opacity: 0.4; }
+      50%  { opacity: 0.6; }
+      100% { transform: translateY(-120vh) scale(0.5); opacity: 0; }
+    }
+
+    .content-wrapper {
+      z-index: 1;
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 2em;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
-  <div class="background"></div>
-  <div class="view active">
-    <a class="back" href="index.html">← Retour</a>
-    <h1>Termes de Service</h1>
-    <p><strong>Dernière mise à jour :</strong> 21/05/2025</p>
-    <ol>
-      <li><strong>Respect des règles de Discord et du serveur :</strong><br>
-        Les utilisateurs doivent se conformer aux conditions d'utilisation de Discord ainsi qu'aux règles du serveur.</li>
-      <li><strong>Utilisation responsable :</strong><br>
-        Il est interdit d'utiliser le bot pour :
-        <ul>
-          <li>Envoyer du spam ou du contenu inapproprié.</li>
-          <li>Harceler ou intimider d'autres utilisateurs.</li>
-          <li>Automatiser des actions interdites par Discord.</li>
-          <li>Exploiter des failles du bot.</li>
-        </ul>
-      </li>
-      <li><strong>Modifications et suspension :</strong><br>
-        Nous pouvons modifier ou désactiver le bot à tout moment, et bannir un utilisateur en cas de non-respect.</li>
-      <li><strong>Collecte de données :</strong><br>
-        Des données peuvent être collectées à des fins d'amélioration, mais jamais partagées sans consentement.</li>
-      <li><strong>Responsabilité :</strong><br>
-        L’utilisateur est responsable de ses actes avec le bot.</li>
-      <li><strong>Contact :</strong><br>
-        Pour toute question, contactez : jawad.neggaz63@outlook.fr</li>
-    </ol>
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
   </div>
-  <footer>
-    © 2025 ッ_ SCΛRΞD_ッ BOT. Tous droits réservés.
-  </footer>
+
+  <div class="content-wrapper">
+    <h1>Termes de Service</h1>
+    <p><strong>Dernière mise à jour :</strong> 21 mai 2025</p>
+
+    <h2>1. Respect des règles de Discord et du serveur</h2>
+    <p>Tous les utilisateurs doivent respecter les <a href="https://discord.com/terms" target="_blank">Conditions d'utilisation de Discord</a> ainsi que les règles spécifiques à notre serveur. Le non-respect peut entraîner des sanctions immédiates, y compris un bannissement du bot ou du serveur.</p>
+
+    <h2>2. Utilisation responsable du bot</h2>
+    <p>L'utilisation du bot est un privilège, non un droit. Il est strictement interdit d'utiliser le bot dans les cas suivants :</p>
+    <ul>
+      <li>Envoyer du spam, des publicités non sollicitées ou tout contenu offensant.</li>
+      <li>Harceler, intimider ou menacer d'autres utilisateurs, que ce soit en privé ou en public.</li>
+      <li>Automatiser des actions interdites par Discord (selfbots, macros, flood, etc.).</li>
+      <li>Tenter d’exploiter des bugs ou des failles du bot dans un but malveillant.</li>
+    </ul>
+
+    <h2>3. Modifications, suspension et bannissement</h2>
+    <p>Nous nous réservons le droit de modifier, suspendre ou désactiver à tout moment une ou plusieurs fonctionnalités du bot, sans préavis. En cas d’abus ou de non-respect des règles, l’accès au bot peut être définitivement révoqué.</p>
+
+    <h2>4. Collecte et traitement des données</h2>
+    <p>Le bot peut collecter certaines données (ID utilisateur, logs de commande, statistiques anonymes) uniquement à des fins de fonctionnement et d’amélioration. Aucune donnée personnelle n’est partagée avec des tiers sans votre consentement explicite.</p>
+
+    <h2>5. Limitation de responsabilité</h2>
+    <p>L’utilisateur est seul responsable de son comportement avec le bot. Nous déclinons toute responsabilité en cas de mauvaise utilisation, de sanctions imposées par Discord ou de perte de données.</p>
+
+    <h2>6. Contact</h2>
+    <p>Pour toute question, remarque ou demande liée au bot, vous pouvez nous contacter par email : <a href="mailto:jawad.neggaz63@outlook.fr">jawad.neggaz63@outlook.fr</a></p>
+
+    <p style="text-align:center; margin-top: 2em;"><strong>© 2025 ッ_ SCΛRΞD_ッ BOT. Tous droits réservés.</strong></p>
+  </div>
 </body>
 </html>
