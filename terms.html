@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Termes de Service</title>
   <style>
     body {
@@ -98,6 +98,36 @@
       border-radius: 20px;
       padding: 2em;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    a {
+      color: #5f27cd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Bouton retour */
+    .btn-retour {
+      align-self: flex-start;
+      margin-bottom: 1em;
+      background-color: #5f27cd;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5em 1.2em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(95, 39, 205, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .btn-retour:hover {
+      background-color: #46259a;
     }
   </style>
 </head>
@@ -116,11 +146,13 @@
   </div>
 
   <div class="content-wrapper">
+    <button class="btn-retour" onclick="history.back()">← Retour</button>
+
     <h1>Termes de Service</h1>
-    <p><strong>Dernière mise à jour :</strong> 23 mai 2025</p>
+    <p><strong>Dernière mise à jour :</strong> 21 mai 2025</p>
 
     <h2>1. Respect des règles de Discord et du serveur</h2>
-    <p>Tous les utilisateurs doivent respecter les <a href="https://discord.com/terms" target="_blank">Conditions d'utilisation de Discord</a> ainsi que les règles spécifiques à notre serveur. Le non-respect peut entraîner des sanctions immédiates, y compris un bannissement du bot ou du serveur.</p>
+    <p>Tous les utilisateurs doivent respecter les <a href="discord-terms.html">Conditions d'utilisation de Discord</a> ainsi que les règles spécifiques à notre serveur. Le non-respect peut entraîner des sanctions immédiates, y compris un bannissement du bot ou du serveur.</p>
 
     <h2>2. Utilisation responsable du bot</h2>
     <p>L'utilisation du bot est un privilège, non un droit. Il est strictement interdit d'utiliser le bot dans les cas suivants :</p>
