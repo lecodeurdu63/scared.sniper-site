@@ -4,11 +4,37 @@
   <meta charset="UTF-8" />
   <title>Créer un ticket - SCΛRΞD BOT</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Style bouton retour */
+    .btn-retour {
+      display: inline-block;
+      margin-bottom: 1.5em;
+      background-color: #5f27cd;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5em 1.2em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(95, 39, 205, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      text-align: center;
+      text-decoration: none;
+    }
+    .btn-retour:hover,
+    .btn-retour:focus {
+      background-color: #46259a;
+      outline: none;
+      box-shadow: 0 0 0 3px #9a82e8;
+    }
+  </style>
 </head>
 <body>
   <div class="background"></div>
   <div class="view active">
-    <a class="back" href="index.html">← Retour</a>
+    <button class="btn-retour" type="button" onclick="history.back()">← Retour</button>
+
     <h1>Créer un ticket</h1>
     <form id="ticketForm">
       <label>Nom d'utilisateur :</label>
