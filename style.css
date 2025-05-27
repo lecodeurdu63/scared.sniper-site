@@ -65,6 +65,25 @@ h1 {
   transform: scale(1.05);
 }
 
+/* ===== BOUTON RETOUR ===== */
+.btn-retour {
+  align-self: flex-start;
+  margin-bottom: 1em;
+  background-color: #5f27cd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(95, 39, 205, 0.6);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.btn-retour:hover {
+  background-color: #46259a;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
