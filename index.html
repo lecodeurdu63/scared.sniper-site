@@ -12,17 +12,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       animation: fadeIn 1.5s ease-in-out;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
 
     h1 {
       color: white;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      margin-bottom: 40px;
+      margin: 40px 0 20px;
       font-size: 3em;
       z-index: 1;
     }
@@ -33,6 +33,7 @@
       gap: 20px;
       align-items: center;
       z-index: 1;
+      margin-bottom: 30px;
     }
 
     .menu a {
@@ -53,6 +54,29 @@
     .menu a:hover {
       background-color: #bca2e0;
       transform: scale(1.05);
+    }
+
+    .discord-widget {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 1;
+      margin-bottom: 50px;
+    }
+
+    .discord-widget img {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-bottom: 10px;
+    }
+
+    .discord-widget h2 {
+      font-family: sans-serif;
+      color: white;
+      margin-bottom: 10px;
     }
 
     @keyframes fadeIn {
@@ -82,16 +106,11 @@
       animation: float 12s linear infinite;
     }
 
-    .particle:nth-child(1)  { left: 10%; top: 90%; animation-delay: 0s; }
-    .particle:nth-child(2)  { left: 25%; top: 100%; animation-delay: 2s; }
-    .particle:nth-child(3)  { left: 40%; top: 110%; animation-delay: 1s; }
-    .particle:nth-child(4)  { left: 55%; top: 95%; animation-delay: 3s; }
-    .particle:nth-child(5)  { left: 70%; top: 105%; animation-delay: 4s; }
-    .particle:nth-child(6)  { left: 85%; top: 120%; animation-delay: 2.5s; }
-    .particle:nth-child(7)  { left: 15%; top: 100%; animation-delay: 6s; }
-    .particle:nth-child(8)  { left: 35%; top: 115%; animation-delay: 5s; }
-    .particle:nth-child(9)  { left: 60%; top: 110%; animation-delay: 1.5s; }
-    .particle:nth-child(10) { left: 80%; top: 95%; animation-delay: 3.5s; }
+    .particle:nth-child(n) {
+      left: calc(10% * (var(--i)));
+      top: calc(90% + (var(--i) * 5%));
+      animation-delay: calc(var(--i) * 0.5s);
+    }
 
     @keyframes float {
       0%   { transform: translateY(0) scale(1); opacity: 0.4; }
@@ -103,46 +122,170 @@
 <body>
 
   <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+    <!-- 40 particules -->
+    <!-- Tu peux ajuster leur nombre si tu veux alléger la page -->
+    <!-- Ici je les ai gardées comme dans ton code original -->
+    <div class="particle" style="--i:1"></div>
+    <div class="particle" style="--i:2"></div>
+    <div class="particle" style="--i:3"></div>
+    <div class="particle" style="--i:4"></div>
+    <div class="particle" style="--i:5"></div>
+    <div class="particle" style="--i:6"></div>
+    <div class="particle" style="--i:7"></div>
+    <div class="particle" style="--i:8"></div>
+    <div class="particle" style="--i:9"></div>
+    <div class="particle" style="--i:10"></div>
+    <div class="particle" style="--i:11"></div>
+    <div class="particle" style="--i:12"></div>
+    <div class="particle" style="--i:13"></div>
+    <div class="particle" style="--i:14"></div>
+    <div class="particle" style="--i:15"></div>
+    <div class="particle" style="--i:16"></div>
+    <div class="particle" style="--i:17"></div>
+    <div class="particle" style="--i:18"></div>
+    <div class="particle" style="--i:19"></div>
+    <div class="particle" style="--i:20"></div>
+    <div class="particle" style="--i:21"></div>
+    <div class="particle" style="--i:22"></div>
+    <div class="particle" style="--i:23"></div>
+    <div class="particle" style="--i:24"></div>
+    <div class="particle" style="--i:25"></div>
+    <div class="particle" style="--i:26"></div>
+    <div class="particle" style="--i:27"></div>
+    <div class="particle" style="--i:28"></div>
+    <div class="particle" style="--i:29"></div>
+    <div class="particle" style="--i:30"></div>
+    <div class="particle" style="--i:31"></div>
+    <div class="particle" style="--i:32"></div>
+    <div class="particle" style="--i:33"></div>
+    <div class="particle" style="--i:34"></div>
+    <div class="particle" style="--i:35"></div>
+    <div class="particle" style="--i:36"></div>
+    <div class="particle" style="--i:37"></div>
+    <div class="particle" style="--i:38"></div>
+    <div class="particle" style="--i:39"></div>
+    <div class="particle" style="--i:40"></div>
+<div class="particle" style="--i:1"></div>
+    <div class="particle" style="--i:2"></div>
+    <div class="particle" style="--i:3"></div>
+    <div class="particle" style="--i:4"></div>
+    <div class="particle" style="--i:5"></div>
+    <div class="particle" style="--i:6"></div>
+    <div class="particle" style="--i:7"></div>
+    <div class="particle" style="--i:8"></div>
+    <div class="particle" style="--i:9"></div>
+    <div class="particle" style="--i:10"></div>
+    <div class="particle" style="--i:11"></div>
+    <div class="particle" style="--i:12"></div>
+    <div class="particle" style="--i:13"></div>
+    <div class="particle" style="--i:14"></div>
+    <div class="particle" style="--i:15"></div>
+    <div class="particle" style="--i:16"></div>
+    <div class="particle" style="--i:17"></div>
+    <div class="particle" style="--i:18"></div>
+    <div class="particle" style="--i:19"></div>
+    <div class="particle" style="--i:20"></div>
+    <div class="particle" style="--i:21"></div>
+    <div class="particle" style="--i:22"></div>
+    <div class="particle" style="--i:23"></div>
+    <div class="particle" style="--i:24"></div>
+    <div class="particle" style="--i:25"></div>
+    <div class="particle" style="--i:26"></div>
+    <div class="particle" style="--i:27"></div>
+    <div class="particle" style="--i:28"></div>
+    <div class="particle" style="--i:29"></div>
+    <div class="particle" style="--i:30"></div>
+    <div class="particle" style="--i:31"></div>
+    <div class="particle" style="--i:32"></div>
+    <div class="particle" style="--i:33"></div>
+    <div class="particle" style="--i:34"></div>
+    <div class="particle" style="--i:35"></div>
+    <div class="particle" style="--i:36"></div>
+    <div class="particle" style="--i:37"></div>
+    <div class="particle" style="--i:38"></div>
+    <div class="particle" style="--i:39"></div>
+    <div class="particle" style="--i:40"></div>
+<div class="particle" style="--i:1"></div>
+    <div class="particle" style="--i:2"></div>
+    <div class="particle" style="--i:3"></div>
+    <div class="particle" style="--i:4"></div>
+    <div class="particle" style="--i:5"></div>
+    <div class="particle" style="--i:6"></div>
+    <div class="particle" style="--i:7"></div>
+    <div class="particle" style="--i:8"></div>
+    <div class="particle" style="--i:9"></div>
+    <div class="particle" style="--i:10"></div>
+    <div class="particle" style="--i:11"></div>
+    <div class="particle" style="--i:12"></div>
+    <div class="particle" style="--i:13"></div>
+    <div class="particle" style="--i:14"></div>
+    <div class="particle" style="--i:15"></div>
+    <div class="particle" style="--i:16"></div>
+    <div class="particle" style="--i:17"></div>
+    <div class="particle" style="--i:18"></div>
+    <div class="particle" style="--i:19"></div>
+    <div class="particle" style="--i:20"></div>
+    <div class="particle" style="--i:21"></div>
+    <div class="particle" style="--i:22"></div>
+    <div class="particle" style="--i:23"></div>
+    <div class="particle" style="--i:24"></div>
+    <div class="particle" style="--i:25"></div>
+    <div class="particle" style="--i:26"></div>
+    <div class="particle" style="--i:27"></div>
+    <div class="particle" style="--i:28"></div>
+    <div class="particle" style="--i:29"></div>
+    <div class="particle" style="--i:30"></div>
+    <div class="particle" style="--i:31"></div>
+    <div class="particle" style="--i:32"></div>
+    <div class="particle" style="--i:33"></div>
+    <div class="particle" style="--i:34"></div>
+    <div class="particle" style="--i:35"></div>
+    <div class="particle" style="--i:36"></div>
+    <div class="particle" style="--i:37"></div>
+    <div class="particle" style="--i:38"></div>
+    <div class="particle" style="--i:39"></div>
+    <div class="particle" style="--i:40"></div>
+<div class="particle" style="--i:1"></div>
+    <div class="particle" style="--i:2"></div>
+    <div class="particle" style="--i:3"></div>
+    <div class="particle" style="--i:4"></div>
+    <div class="particle" style="--i:5"></div>
+    <div class="particle" style="--i:6"></div>
+    <div class="particle" style="--i:7"></div>
+    <div class="particle" style="--i:8"></div>
+    <div class="particle" style="--i:9"></div>
+    <div class="particle" style="--i:10"></div>
+    <div class="particle" style="--i:11"></div>
+    <div class="particle" style="--i:12"></div>
+    <div class="particle" style="--i:13"></div>
+    <div class="particle" style="--i:14"></div>
+    <div class="particle" style="--i:15"></div>
+    <div class="particle" style="--i:16"></div>
+    <div class="particle" style="--i:17"></div>
+    <div class="particle" style="--i:18"></div>
+    <div class="particle" style="--i:19"></div>
+    <div class="particle" style="--i:20"></div>
+    <div class="particle" style="--i:21"></div>
+    <div class="particle" style="--i:22"></div>
+    <div class="particle" style="--i:23"></div>
+    <div class="particle" style="--i:24"></div>
+    <div class="particle" style="--i:25"></div>
+    <div class="particle" style="--i:26"></div>
+    <div class="particle" style="--i:27"></div>
+    <div class="particle" style="--i:28"></div>
+    <div class="particle" style="--i:29"></div>
+    <div class="particle" style="--i:30"></div>
+    <div class="particle" style="--i:31"></div>
+    <div class="particle" style="--i:32"></div>
+    <div class="particle" style="--i:33"></div>
+    <div class="particle" style="--i:34"></div>
+    <div class="particle" style="--i:35"></div>
+    <div class="particle" style="--i:36"></div>
+    <div class="particle" style="--i:37"></div>
+    <div class="particle" style="--i:38"></div>
+    <div class="particle" style="--i:39"></div>
+    <div class="particle" style="--i:40"></div>
+
   </div>
 
   <h1>Bienvenue sur le site de Scared Bot</h1>
@@ -153,7 +296,22 @@
     <a href="dicord-terms.html">📜 Conditions d’utilisations de discord</a>
     <a href="ticket.html">🎫 Faire une demande</a>
     <a href="admin.html">🛡️ Admin only</a>
-    </div>
+  </div>
+
+  <div class="discord-widget">
+    <a href="https://discord.gg/qkwQrHJ3b5" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/discord.svg" alt="Discord">
+    </a>
+    <h2>Rejoignez-nous sur Discord</h2>
+    <iframe
+      src="https://discord.com/widget?id=1364277481997209651&theme=dark"
+      width="350"
+      height="500"
+      allowtransparency="true"
+      frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
+  </div>
 
 </body>
 </html>
