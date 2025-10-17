@@ -5,7 +5,7 @@ const adminSection = document.getElementById("adminSection");
 const loginError = document.getElementById("loginError");
 
 const CORRECT_USERNAME = "admin";
-const CORRECT_PASSWORD = "scared123";
+const CORRECT_PASSWORD = "Scared134356032";
 
 loginForm.addEventListener("submit", function(e) {
   e.preventDefault();
